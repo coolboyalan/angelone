@@ -10,10 +10,6 @@ import TradeLog from "#models/tradeLog";
 
 // Reuse your Zerodha helper for historical candles and rounding/levels logic
 import {
-  main as kiteMain,
-  getSpecificCachedOption as UNUSED,
-} from "#utils/assetChecker"; // keeps parity with your runners
-import {
   loadAngelScripMaster,
   resolveAngelOption,
   angelQuotePayloadFromResolved,
@@ -38,7 +34,6 @@ const X_HEADERS_BASE = {
     process.exit(1);
   }
 
-  await kiteMain(); // your existing loader for Zerodha instruments
   await loadAngelScripMaster(); // load Angel scrip master
 
   const server = express();
