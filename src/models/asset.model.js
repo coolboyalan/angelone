@@ -32,6 +32,9 @@ Asset.initialize({
   upstoxToken: {
     type: DataTypes.STRING,
   },
+  angeloneToken: {
+    type: DataTypes.STRING,
+  },
 });
 
 export default Asset;
